@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,77 +7,82 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 text-gray-800">
-    <div class="flex min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen">
       <!-- Menú lateral -->
-      <aside class="w-64 bg-white border-r p-6">
+      <aside class="w-full md:w-64 bg-white border-r p-6">
         <h2 class="text-2xl font-bold mb-4">Tutorial GitHub</h2>
         <nav class="space-y-2 text-sm">
-          <a href="#introduccion" class="block hover:underline"
+          <a
+            href="#introduccion"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
             >0. Introducción</a
           >
-          <a href="#crear-cuenta" class="block hover:underline"
+          <a
+            href="#crear-cuenta"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
             >1. Crear cuenta GitHub</a
           >
-          <a href="#crear-repo" class="block hover:underline"
+          <a
+            href="#crear-repo"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
             >2. Crear repositorio</a
           >
-          <a href="#ext-vscode" class="block hover:underline"
+          <a
+            href="#ext-vscode"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
             >3. Usar extensión en VSCode</a
           >
-          <a href="#commits-push" class="block hover:underline"
+          <a
+            href="#commits-push"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
             >4. Commits y Push</a
           >
-          <a href="#pull" class="block hover:underline">5. Pull de cambios</a>
+          <a
+            href="#pull"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
+            >5. Pull de cambios</a
+          >
+          <a
+            href="#mas"
+            class="block px-2 py-2 rounded hover:bg-gray-100 text-base"
+            >6. Conocé más</a
+          >
         </nav>
       </aside>
 
-      <!-- Contenido -->
-      <main class="flex-1 p-8 space-y-12">
-        <!-- Introducción -->
+      <!-- Contenido principal -->
+      <main class="flex-1 p-6 md:p-8 space-y-12">
+        <!-- Sección: Introducción -->
         <section id="introduccion">
           <h2 class="text-2xl font-bold mb-4">0. Introducción</h2>
           <p class="mb-4">
-            Hola Marcos 👋, este tutorial fue pensado para vos, para que puedas
-            usar GitHub de forma práctica y sencilla directamente desde Visual
-            Studio Code, sin necesidad de aprender comandos complicados.
+            Hola Marcos 👋, este tutorial fue pensado especialmente para vos,
+            para que puedas usar GitHub de forma práctica y sencilla desde
+            Visual Studio Code, sin necesidad de aprender comandos complicados.
           </p>
-
-          <p class="mb-2"><strong>¿Qué es GitHub?</strong></p>
+          <p class="font-semibold mb-1">¿Qué es GitHub?</p>
           <p class="mb-4">
-            GitHub es una plataforma que permite guardar y controlar los cambios
-            que se hacen en un sitio web (o cualquier tipo de proyecto digital).
-            Imaginá que cada vez que hacés una modificación, GitHub guarda una
-            copia de seguridad automática. Así podés volver atrás si algo sale
-            mal o si se borra algo por error.
+            GitHub es una plataforma donde podés guardar tu código y controlar
+            los cambios que hacés. Imaginá que cada vez que modificás algo,
+            GitHub guarda una copia de seguridad automática. Así podés volver
+            atrás si algo sale mal.
           </p>
-
-          <p class="mb-2"><strong>¿Por qué es útil?</strong></p>
+          <p class="font-semibold mb-1">¿Por qué es útil?</p>
           <ul class="list-disc list-inside mb-4">
             <li>Evita la pérdida de archivos importantes.</li>
-            <li>Permite tener un historial de todos los cambios.</li>
+            <li>Permite ver el historial completo de cambios.</li>
+            <li>Facilita el trabajo en equipo.</li>
             <li>
-              Facilita el trabajo en equipo, ya que todos pueden ver y
-              actualizar la misma versión del proyecto.
-            </li>
-            <li>
-              Es muy útil para sitios web: podés saber qué cambió, cuándo, y
-              quién lo cambió.
+              Ideal para sitios web: sabés qué cambió, cuándo y quién lo cambió.
             </li>
           </ul>
-
-          <p>En este tutorial te voy a mostrar paso a paso cómo:</p>
+          <p>En este tutorial vas a aprender a:</p>
           <ul class="list-decimal list-inside">
-            <li>Crear tu cuenta en GitHub.</li>
-            <li>Crear un nuevo proyecto o “repositorio”.</li>
-            <li>
-              Usar la extensión de Git en Visual Studio Code para trabajar
-              cómodamente.
-            </li>
-            <li>Subir y guardar cambios (commits y push).</li>
-            <li>
-              Traer los cambios más recientes del proyecto antes de empezar a
-              trabajar (pull).
-            </li>
+            <li>Crear una cuenta en GitHub.</li>
+            <li>Crear un repositorio.</li>
+            <li>Usar la extensión de Git en Visual Studio Code.</li>
+            <li>Guardar tus cambios (commits y push).</li>
+            <li>Traer cambios del repositorio (pull).</li>
           </ul>
         </section>
 
@@ -95,8 +100,8 @@
               >github.com</a
             >
             y creá una cuenta con tu email. Usá un nombre de usuario y
-            contraseña fáciles de recordar. Confirmá tu cuenta desde el correo
-            electrónico.
+            contraseña fáciles de recordar. Confirmá la cuenta desde el correo
+            que te van a enviar.
           </p>
         </section>
 
@@ -104,40 +109,52 @@
         <section id="crear-repo">
           <h2 class="text-xl font-semibold mb-2">2. Crear un repositorio</h2>
           <p>
-            Una vez dentro, hacé clic en el botón <strong>"New"</strong> o
-            "Crear nuevo repositorio". Dale un nombre (por ejemplo:
-            <code>mi-proyecto</code>) y dejá todo lo demás como está. Hacé clic
-            en <strong>"Create repository"</strong>.
+            Una vez logueado, hacé clic en <strong>"New"</strong> para crear un
+            nuevo repositorio. Ponéle un nombre (por ejemplo:
+            <code>mi-proyecto</code>) y dejá todo lo demás como está. Después
+            hacé clic en <strong>"Create repository"</strong>.
           </p>
         </section>
 
-        <!-- Extensión de VS Code -->
+        <!-- Extensión en VS Code -->
         <section id="ext-vscode">
           <h2 class="text-xl font-semibold mb-2">
             3. Usar la extensión de Git en VS Code
           </h2>
           <p>
-            Visual Studio Code ya viene con la extensión de Git integrada (la
-            que aparece en la imagen como símbolo de ramas). Si no aparece,
-            podés instalarla desde la sección de extensiones.
+            Visual Studio Code ya incluye la extensión de Git (la que tiene un
+            icono con ramas). Si no aparece, podés buscarla en la pestaña de
+            extensiones.
           </p>
           <p>
             En la barra lateral izquierda, hacé clic en el ícono de ramas (<code
               >Control de código fuente</code
-            >). Ahí vas a poder inicializar un repositorio si no lo hiciste aún,
-            o conectarte a uno existente con "Clonar repositorio".
+            >). Desde ahí vas a poder inicializar un repositorio nuevo o clonar
+            uno existente.
           </p>
-          <img src="assets/img/timeline.png" alt="" class="mt-4" />
-          <figcaption class="mb-8">
-            En la barra lateral izquierda aparece con el icono marcado
-          </figcaption>
-          <div class="max-w-[50%]">
-            <img src="assets/img/cap1.png" alt="" />
-            <figcaption caass="mb-8">
-              Para inicializar el repositorio solo basta con hacer click en
-              "Inicializar repositorio". Esto sucede una vez por proyecto.
+
+          <figure class="mt-4 max-w-lg">
+            <img
+              src="assets/img/timeline.png"
+              alt="Icono de Git"
+              class="rounded"
+            />
+            <figcaption class="text-sm text-gray-600 mt-2">
+              En la barra lateral aparece este icono para acceder a Git
             </figcaption>
-          </div>
+          </figure>
+
+          <figure class="mt-6 max-w-lg">
+            <img
+              src="assets/img/cap1.png"
+              alt="Inicializar repositorio"
+              class="rounded"
+            />
+            <figcaption class="text-sm text-gray-600 mt-2">
+              Hacé clic en "Inicializar repositorio". Solo se hace una vez por
+              proyecto.
+            </figcaption>
+          </figure>
         </section>
 
         <!-- Commits y Push -->
@@ -147,57 +164,102 @@
           </h2>
           <p>
             <strong>Commit:</strong> es como "guardar cambios". Escribí un
-            mensaje descriptivo del cambio que hiciste y hacé clic en el ✔️ para
-            confirmar.
+            mensaje descriptivo y hacé clic en el ✔️ para confirmarlo.
           </p>
           <p>
             <strong>Push:</strong> después del commit, hacé clic en los tres
-            puntitos (⋮) y seleccioná "Push" para subir los cambios a GitHub, o
-            hacé click en el botón que dice "Confirmación".
+            puntitos (⋮) y elegí "Push", o hacé clic en el botón "Confirmación"
+            si aparece.
           </p>
-          <div class="max-w-[50%]">
-            <img src="assets/img/cap2.png" alt="" class="mt-8" />
-            <figcaption class="mb-8">
-              Los cambios no guardados, o "no commiteados" te aparecerán aquí
-              para guardar. Hacé click en el "+" para guardar los cambios, y en
-              la caja de texto haces un comentario breve sobre lo que se está
-              actualizando
+
+          <figure class="mt-6 max-w-lg">
+            <img
+              src="assets/img/cap2.png"
+              alt="Cambios no guardados"
+              class="rounded"
+            />
+            <figcaption class="text-sm text-gray-600 mt-2">
+              Los archivos modificados aparecen acá. Hacé clic en el "+" para
+              agregarlos al commit.
             </figcaption>
-          </div>
-          <div class="max-w-[50%]">
-            <img src="assets/img/cap3.png" alt="" class="mt-8" />
-            <figcaption class="mb-8">
-              Luego se confirman los cambios a enviar
+          </figure>
+
+          <figure class="mt-6 max-w-lg">
+            <img
+              src="assets/img/cap3.png"
+              alt="Confirmar commit"
+              class="rounded"
+            />
+            <figcaption class="text-sm text-gray-600 mt-2">
+              Confirmá los cambios a enviar con un mensaje descriptivo.
             </figcaption>
-          </div>
-          <div class="max-w-[50%]">
-            <img src="assets/img/cap4.png" alt="" class="mt-8" />
-            <figcaption class="mb-8">
-              Si es la primera vez que envias cambios a un repo, te aparecerá
-              este mensaje para publicar la Branch o "rama". Luego, solo te
-              mostrara un mensaje de que se enviarán los datos de tu entorno al
-              repositorio
+          </figure>
+
+          <figure class="mt-6 max-w-lg">
+            <img
+              src="assets/img/cap4.png"
+              alt="Publicar rama"
+              class="rounded"
+            />
+            <figcaption class="text-sm text-gray-600 mt-2">
+              La primera vez que envíes cambios, aparecerá la opción de publicar
+              la rama. Después, solo tendrás que confirmar que querés enviarlos.
             </figcaption>
-          </div>
+          </figure>
         </section>
 
-        <!-- Pull -->
+        <!-- Pull de cambios -->
         <section id="pull">
           <h2 class="text-xl font-semibold mb-2">
             5. Hacer un pull antes de trabajar
           </h2>
-          <p>
-            Antes de empezar a trabajar cada día, es buena práctica hacer un
-            <strong>pull</strong> para traer los cambios nuevos del repositorio
-            remoto a tu máquina local. Hacelo desde el mismo menú de los tres
-            puntitos: seleccioná <strong>Pull</strong>.
+          <p class="mb-2">
+            Antes de comenzar a trabajar, traé los cambios más recientes desde
+            GitHub. Esto se llama hacer un <strong>pull</strong>.
           </p>
-          <p>
-            Esto evita conflictos y asegura que estés trabajando sobre la última
-            versión del proyecto.
+          <p class="mb-2">
+            Presioná <kbd>Ctrl + ñ</kbd> para abrir la terminal integrada de VS
+            Code.
           </p>
+          <p class="mb-2">
+            Luego escribí este comando y presioná <kbd>Enter</kbd>:
+          </p>
+          <pre
+            class="bg-gray-200 text-sm p-3 rounded mb-2"
+          ><code>git pull</code></pre>
+          <p class="mb-2">
+            Esto descarga los cambios nuevos y mantiene tu proyecto actualizado.
+          </p>
+          <p class="mb-2">
+            <strong>¿Y si hay un conflicto?</strong> Si vos y otra persona
+            modificaron el mismo archivo, Git no sabrá qué versión conservar. Te
+            lo va a señalar como un conflicto.
+          </p>
+        </section>
+
+        <section id="mas" class="px-4">
+          <h2 class="text-xl font-semibold mb-4">6. Conocé más</h2>
+          <div class="relative w-full pb-[56.25%] h-0">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/jGehuhFhtnE"
+              title="¿Qué es Git y cómo funciona? - La mejor explicación en español"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </section>
       </main>
     </div>
   </body>
+  <footer>
+    <div class="bg-gray-800 text-white text-center py-4">
+      <p class="text-md">
+        Tutorial creado por Martín Matías -
+        <a href="https://github.com/kyrkematias">Github</a>
+      </p>
+    </div>
+  </footer>
 </html>
