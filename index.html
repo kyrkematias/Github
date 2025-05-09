@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial GitHub en VS Code</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="flex min-h-screen">
+      <!-- Menú lateral -->
+      <aside class="w-64 bg-white border-r p-6">
+        <h2 class="text-2xl font-bold mb-4">Tutorial GitHub</h2>
+        <nav class="space-y-2 text-sm">
+          <a href="#introduccion" class="block hover:underline"
+            >0. Introducción</a
+          >
+          <a href="#crear-cuenta" class="block hover:underline"
+            >1. Crear cuenta GitHub</a
+          >
+          <a href="#crear-repo" class="block hover:underline"
+            >2. Crear repositorio</a
+          >
+          <a href="#ext-vscode" class="block hover:underline"
+            >3. Usar extensión en VSCode</a
+          >
+          <a href="#commits-push" class="block hover:underline"
+            >4. Commits y Push</a
+          >
+          <a href="#pull" class="block hover:underline">5. Pull de cambios</a>
+        </nav>
+      </aside>
+
+      <!-- Contenido -->
+      <main class="flex-1 p-8 space-y-12">
+        <!-- Introducción -->
+        <section id="introduccion">
+          <h2 class="text-2xl font-bold mb-4">0. Introducción</h2>
+          <p class="mb-4">
+            Hola Marcos 👋, este tutorial fue pensado para vos, para que puedas
+            usar GitHub de forma práctica y sencilla directamente desde Visual
+            Studio Code, sin necesidad de aprender comandos complicados.
+          </p>
+
+          <p class="mb-2"><strong>¿Qué es GitHub?</strong></p>
+          <p class="mb-4">
+            GitHub es una plataforma que permite guardar y controlar los cambios
+            que se hacen en un sitio web (o cualquier tipo de proyecto digital).
+            Imaginá que cada vez que hacés una modificación, GitHub guarda una
+            copia de seguridad automática. Así podés volver atrás si algo sale
+            mal o si se borra algo por error.
+          </p>
+
+          <p class="mb-2"><strong>¿Por qué es útil?</strong></p>
+          <ul class="list-disc list-inside mb-4">
+            <li>Evita la pérdida de archivos importantes.</li>
+            <li>Permite tener un historial de todos los cambios.</li>
+            <li>
+              Facilita el trabajo en equipo, ya que todos pueden ver y
+              actualizar la misma versión del proyecto.
+            </li>
+            <li>
+              Es muy útil para sitios web: podés saber qué cambió, cuándo, y
+              quién lo cambió.
+            </li>
+          </ul>
+
+          <p>En este tutorial te voy a mostrar paso a paso cómo:</p>
+          <ul class="list-decimal list-inside">
+            <li>Crear tu cuenta en GitHub.</li>
+            <li>Crear un nuevo proyecto o “repositorio”.</li>
+            <li>
+              Usar la extensión de Git en Visual Studio Code para trabajar
+              cómodamente.
+            </li>
+            <li>Subir y guardar cambios (commits y push).</li>
+            <li>
+              Traer los cambios más recientes del proyecto antes de empezar a
+              trabajar (pull).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Crear cuenta -->
+        <section id="crear-cuenta">
+          <h2 class="text-xl font-semibold mb-2">
+            1. Crear una cuenta en GitHub
+          </h2>
+          <p>
+            Ingresá a
+            <a
+              href="https://github.com"
+              class="text-blue-600 underline"
+              target="_blank"
+              >github.com</a
+            >
+            y creá una cuenta con tu email. Usá un nombre de usuario y
+            contraseña fáciles de recordar. Confirmá tu cuenta desde el correo
+            electrónico.
+          </p>
+        </section>
+
+        <!-- Crear repositorio -->
+        <section id="crear-repo">
+          <h2 class="text-xl font-semibold mb-2">2. Crear un repositorio</h2>
+          <p>
+            Una vez dentro, hacé clic en el botón <strong>"New"</strong> o
+            "Crear nuevo repositorio". Dale un nombre (por ejemplo:
+            <code>mi-proyecto</code>) y dejá todo lo demás como está. Hacé clic
+            en <strong>"Create repository"</strong>.
+          </p>
+        </section>
+
+        <!-- Extensión de VS Code -->
+        <section id="ext-vscode">
+          <h2 class="text-xl font-semibold mb-2">
+            3. Usar la extensión de Git en VS Code
+          </h2>
+          <p>
+            Visual Studio Code ya viene con la extensión de Git integrada (la
+            que aparece en la imagen como símbolo de ramas). Si no aparece,
+            podés instalarla desde la sección de extensiones.
+          </p>
+          <p>
+            En la barra lateral izquierda, hacé clic en el ícono de ramas (<code
+              >Control de código fuente</code
+            >). Ahí vas a poder inicializar un repositorio si no lo hiciste aún,
+            o conectarte a uno existente con "Clonar repositorio".
+          </p>
+          <img src="assets/img/timeline.png" alt="" class="mt-4" />
+          <figcaption class="mb-8">
+            En la barra lateral izquierda aparece con el icono marcado
+          </figcaption>
+          <div class="max-w-[50%]">
+            <img src="assets/img/cap1.png" alt="" />
+            <figcaption caass="mb-8">
+              Para inicializar el repositorio solo basta con hacer click en
+              "Inicializar repositorio". Esto sucede una vez por proyecto.
+            </figcaption>
+          </div>
+        </section>
+
+        <!-- Commits y Push -->
+        <section id="commits-push">
+          <h2 class="text-xl font-semibold mb-2">
+            4. ¿Qué son los commits y cómo hacer push?
+          </h2>
+          <p>
+            <strong>Commit:</strong> es como "guardar cambios". Escribí un
+            mensaje descriptivo del cambio que hiciste y hacé clic en el ✔️ para
+            confirmar.
+          </p>
+          <p>
+            <strong>Push:</strong> después del commit, hacé clic en los tres
+            puntitos (⋮) y seleccioná "Push" para subir los cambios a GitHub.
+          </p>
+          <div class="max-w-[50%]">
+            <img src="assets/img/cap2.png" alt="" class="mt-8" />
+            <figcaption class="mb-8">
+              Los cambios no guardados, o "no commiteados" te aparecerán aquí
+              para guardar. Hacé click en el "+" para guardar los cambios, y en
+              la caja de texto haces un comentario breve sobre lo que se está
+              actualizando
+            </figcaption>
+          </div>
+        </section>
+
+        <!-- Pull -->
+        <section id="pull">
+          <h2 class="text-xl font-semibold mb-2">
+            5. Hacer un pull antes de trabajar
+          </h2>
+          <p>
+            Antes de empezar a trabajar cada día, es buena práctica hacer un
+            <strong>pull</strong> para traer los cambios nuevos del repositorio
+            remoto a tu máquina local. Hacelo desde el mismo menú de los tres
+            puntitos: seleccioná <strong>Pull</strong>.
+          </p>
+          <p>
+            Esto evita conflictos y asegura que estés trabajando sobre la última
+            versión del proyecto.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
